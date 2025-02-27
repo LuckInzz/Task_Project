@@ -18,11 +18,6 @@ public class TaskController {
         this.taskService = taskService;
     }
 
-    @GetMapping("/home")
-    public String home() {
-        return "API Todo funcionando!";
-    }
-
     @PostMapping
     public Task createTask(@RequestBody Task task) {
         return taskService.createTask(task);
