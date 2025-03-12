@@ -4,63 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
-    <!--link rel="stylesheet" href="../styles.css"-->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+    <div class="container-logo">
+        <img src="logo-task.png" class="logo">
+    </div>
     <div class="container">
-        <div class="first-content">
+        <div class="content first-content">
             <div class="first-column">
-                <h2 class="title">Already have an account?</h2>
-                <p class="description">Login and start managing your tasks</p>
-                <button class="btn">sign in</button>
+                <h2 class="title">Already have</h2>
+                <h2 class="title">an account?</h2>
+                <p class="description">Login and start</p>
+                <p class="description">managing your tasks</p>
+                <button id="signin" class="btn btn-primary">sign in</button>
             </div><!--first column-->
-            <div class="second-culumn">
-                <h2 class="title">Create Account</h2>
+            <div class="second-column">
+                <h2 class="title title-primary">Create Account</h2>
                 <form class="form">
-                    <input type="name" placeholder="Username">
-                    <input type="email" placeholder="E-mail">
-                    <input type="password" placeholder="Password">
-                    <button class="btn">sign up</button>
+                    <label class="label-input" for="">
+                        <i class="fa-solid fa-user icon"></i>
+                        <input type="name" placeholder="Username">
+                    </label>
+                    <label class="label-input" for="">
+                        <i class="fa-solid fa-envelope icon"></i>
+                        <input type="email" placeholder="E-mail">
+                    </label>
+                    <label class="label-input" for="">
+                        <i class="fa-solid fa-lock icon"></i>
+                        <input type="password" placeholder="Password">
+                    </label>
+                    <button class="btn btn-second">sign up</button>
                 </form>
             </div><!--second column-->
         </div><!--first content-->
-        <div class="second-content">
-            <div class="first-column">
-                <h2 class="title">Sign Up</h2>
+        <div class="content second-content">
+            <div class="second-column">
+                <h2 class="title title-primary">Sign In</h2>
                 <form class="form">
-                    <input type="email" placeholder="E-mail">
-                    <input type="password" placeholder="Password">
-                    <a href="#" class="link">Forgot your password?</a>
-                    <button class="btn">sign in</button>
+                    <label class="label-input" for="">
+                        <i class="fa-solid fa-envelope icon"></i>
+                        <input type="email" placeholder="E-mail">
+                    </label>
+                    <label class="label-input" for="">
+                        <i class="fa-solid fa-lock icon"></i>
+                        <input type="password" placeholder="Password">
+                    </label>
+                    <a href="#" class="link-password">Forgot your password?</a>
+                    <button class="btn btn-second">sign in</button>
                 </form>
             </div>
-            <div class="second-column">
-                <h2 class="title">Don't have an account?</h2>
-                <p class="description">Create an account and start managing your tasks</p>
-                <button class="btn">sign up</button>
+            <div class="first-column">
+                <h2 class="title">Don't have</h2>
+                <h2 class="title">an account?</h2>
+                <p class="description">Create an account and</p>
+                <p class="description">start managing your tasks</p>
+                <button id="signup" class="btn btn-primary">sign up</button>
             </div>
         </div><!--second content-->
-
-        <!-- Login Form -->
-        <div id="loginForm">
-            <h1>Login</h1>
-            <input type="email" id="loginEmail" placeholder="E-mail">
-            <input type="password" id="loginPassword" placeholder="Password">
-            <button onclick="login()">Entrar</button>
-            <p>Não tem uma conta? <a href="#" onclick="showRegister()">Cadastre-se</a></p>
-        </div>
-
-        <!-- Register Form -->
-        <div id="registerForm" style="display: none;">
-            <h1>Register</h1>
-            <input type="email" id="registerEmail" placeholder="E-mail">
-            <input type="password" id="registerPassword" placeholder="Password">
-            <input type="password" id="confirmPassword" placeholder="Confirm Password">
-            <button onclick="register()">Cadastrar</button>
-            <p>Já tem uma conta? <a href="#" onclick="showLogin()">Login</a></p>
-        </div>
-    </div>
-
+    </div><!--container-->
     <script src="../script.js"></script>
 </body>
 </html>

@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white
+}
+
+.content {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 960px;
+    height: 50%;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.content::before {
+    content: "";
+    position: absolute;
+    background-color: #338898;
+    width: 40%;
+    height: 100%;
+    border-radius: 8px 0 0 8px;
+}
+
+.title {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.title-primary {
+    color: #338898;
+    height: 55px;
+}
+.description {
+    color: white;
+    font-weight: 100;
+    font-size: small;
+    font-size: 14px;
+    line-height: 25px;
+}
+.first-content {
+    display: flex;
+    position: absolute;
+}
+.first-content .second-column {
+    z-index: 2;
+}
+.first-content .first-column {
+    z-index: 2;
+}
+.first-column {
+    text-align: center;
+    width: 40%;
+}
+.second-column {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.second-content {
+    display: flex;
+    position: absolute;
+}
+.second-content .second-column {
+    z-index: -1;
+}
+.second-content .first-column {
+    z-index: -1;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    text-align: center;
+}
+.form input {
+    height: 45px;
+    width: 100%;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    background-color: rgb(230, 230, 230);
+}
+.label-input {
+    background-color: rgb(230, 230, 230);
+    margin: 4px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.icon {
+    padding: 0 5px;
+}
+
+.btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    background-color: #338898;
+    color: white;
+    font-size: 10px;
+    padding: 10px 50px; 
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    margin-top: 10px;
+}
+.btn-primary {
+    background-color: transparent;
+    border: 1px solid white;
+    transition: background-color 1s;
+}
+.btn-primary:hover {
+    background-color: white;
+    color: #338898;
+}
+
+.btn-second {
+    background-color: #338898;
+    border: 1px solid white;
+    transition: background-color 1s;
+    
+}
+.btn-second:hover {
+    background-color: transparent;
+    color: #338898;
+    border: 1px solid #338898;
+}
+
+.container-logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.logo {
+    position: relative;
+    top: 50px;
+    height: auto;
+    width: 70px
+}
+
+.link-password {
+    color: #338898;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.sign-in-js .first-content .first-column,
+.sign-in-js .first-content .second-column {
+    z-index: -1;
+}
+.sign-in-js .second-content .first-column,
+.sign-in-js .second-content .second-column {
+    z-index: 2;
+}
+.sign-in-js ::before {
+    left: 60%;
+    border-radius: 0 8px 8px 0;
+}
+
+.sign-up-js .first-content .first-column,
+.sign-up-js .first-content .second-column {
+    z-index: 2;
+}
+.sign-up-js .second-content .first-column,
+.sign-up-js .second-content .second-column {
+    z-index: -1;
+}
+.sign-up-js ::before {
+    right: 60%;
+}
