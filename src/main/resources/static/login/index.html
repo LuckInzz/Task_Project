@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Manager</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Login/Register</title>
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -25,17 +25,17 @@
                 <form class="form">
                     <label class="label-input" for="">
                         <i class="fa-solid fa-user icon"></i>
-                        <input type="name" placeholder="Username">
+                        <input id="username" type="text" placeholder="Username">
                     </label>
                     <label class="label-input" for="">
                         <i class="fa-solid fa-envelope icon"></i>
-                        <input type="email" placeholder="E-mail">
+                        <input id="email" type="email" placeholder="E-mail">
                     </label>
                     <label class="label-input" for="">
                         <i class="fa-solid fa-lock icon"></i>
-                        <input type="password" placeholder="Password">
+                        <input id="password" type="password" placeholder="Password">
                     </label>
-                    <button class="btn btn-second">sign up</button>
+                    <button class="btn btn-second" onclick="onSignUp()">sign up</button>
                 </form>
             </div><!--second column-->
         </div><!--first content-->
@@ -45,14 +45,14 @@
                 <form class="form">
                     <label class="label-input" for="">
                         <i class="fa-solid fa-envelope icon"></i>
-                        <input type="email" placeholder="E-mail">
+                        <input id="email2" type="email" placeholder="E-mail">
                     </label>
                     <label class="label-input" for="">
                         <i class="fa-solid fa-lock icon"></i>
-                        <input type="password" placeholder="Password">
+                        <input id="password2" type="password" placeholder="Password">
                     </label>
                     <a href="#" class="link-password">Forgot your password?</a>
-                    <button class="btn btn-second">sign in</button>
+                    <button class="btn btn-second" onclick="onSignIn()">sign in</button>
                 </form>
             </div>
             <div class="first-column">
@@ -64,6 +64,6 @@
             </div>
         </div><!--second content-->
     </div><!--container-->
-    <script src="../script.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 </html>

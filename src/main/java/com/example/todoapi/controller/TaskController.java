@@ -2,6 +2,9 @@ package com.example.todoapi.controller;
 
 import com.example.todoapi.model.Task;
 import com.example.todoapi.service.TaskService;
+
+import jakarta.persistence.Id;
+
 //import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -28,9 +31,9 @@ public class TaskController {
         return taskService.listAll();
     }
 
-    @PutMapping
-    public void updateTask(@RequestBody Task task) {
-        taskService.updateTask(task);
+    @PutMapping("/{id}")
+    public void updateTask(@PathVariable Long id, @RequestBody Task task) {
+        taskService.updateTask(id, task);
     }
 
     @GetMapping("/{id}")
@@ -42,4 +45,6 @@ public class TaskController {
     public void deleteTask(@PathVariable Long id) {
         taskService.deleteTask(id);
     }
+
+
 }

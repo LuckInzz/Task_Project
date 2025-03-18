@@ -28,8 +28,24 @@ public class TaskService {
         return taskRepository.findAll(sort);
     }
 
-    public void updateTask(Task task) {
+    public void saveTask(Task task) {
         taskRepository.save(task);
+    }
+
+    public Task updateTask(Long id, Task task) {
+        Task taskToUpdate = taskRepository.findById(id).get();
+        if (taskToUpdate == null) {
+            return null;
+        }
+        else {
+            taskToUpdate.setName(task.getName());
+            taskToUpdate.setDescription(task.getDescription());
+            taskToUpdate.setDone(task.isDone());
+            taskToUpdate.setPriority(task.getPriority());
+            taskToUpdate.setUpdateDate(task.getUpdateDate());
+            taskRepository.save(taskToUpdate);
+            return taskToUpdate;
+        }
     }
 
     public void deleteTask(Long id) {

@@ -58,10 +58,10 @@ body {
     position: absolute;
 }
 .first-content .second-column {
-    z-index: 2;
+    z-index: 1;
 }
 .first-content .first-column {
-    z-index: 2;
+    z-index: 3;
 }
 .first-column {
     text-align: center;
@@ -166,18 +166,24 @@ body {
 .sign-in-js .first-content .second-column {
     z-index: -1;
 }
-.sign-in-js .second-content .first-column,
+.sign-in-js .second-content .first-column {
+    z-index: 3;
+}
 .sign-in-js .second-content .second-column {
-    z-index: 2;
+    z-index: 1;
 }
 .sign-in-js ::before {
     left: 60%;
     border-radius: 0 8px 8px 0;
+    animation: slidein 2s;
+    z-index: 2;
 }
 
-.sign-up-js .first-content .first-column,
+.sign-up-js .first-content .first-column {
+    z-index: 3;
+}
 .sign-up-js .first-content .second-column {
-    z-index: 2;
+    z-index: 1;
 }
 .sign-up-js .second-content .first-column,
 .sign-up-js .second-content .second-column {
@@ -185,4 +191,46 @@ body {
 }
 .sign-up-js ::before {
     right: 60%;
+    animation: slideout 2s;
+    z-index: 2;
+}
+
+
+@keyframes slidein {
+    
+    from {
+        left: 0;
+        width: 60%;
+    }
+
+    to {
+        left: 60%;
+        width: 40%;
+    }
+}
+
+@keyframes slideout {
+    
+    from {
+        left: 40%;
+        width: 60%;
+    }
+
+    to {
+        left: 0;
+        width: 40%;
+    }
+}
+
+@keyframes vanish {
+    
+    from {
+        opacity: 1;
+        z-index: 1;
+    }	
+
+    to {
+        opacity: 0;
+        z-index: 1;
+    }
 }
